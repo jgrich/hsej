@@ -7,8 +7,8 @@
 
     <xsl:variable name="FileB" select="doc('hstitles.xml')"/>
 
-    <xsl:key name="LookUpinEmbcyb" match="list/journal" use="eissn | pissn | issn"/>
-    <xsl:key name="LookUpinEmbcybTitle" match="list/journal" use="title"/>
+    <xsl:key name="LookUpinhstitles" match="list/journal" use="eissn | pissn | issn"/>
+    
 
     <xsl:template match="/">
         <list>
@@ -17,7 +17,7 @@
                 <xsl:sort select="title"/>
                 <xsl:choose>
                     <xsl:when test="issn/text()">
-                        <xsl:if test="exists(key('LookUpinEmbcyb', issn, $FileB))">
+                        <xsl:if test="exists(key('LookUpinhstitles', issn, $FileB))">
                             <xsl:copy-of select="."/>
                         </xsl:if>
                     </xsl:when>
