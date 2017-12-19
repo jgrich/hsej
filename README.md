@@ -19,3 +19,12 @@ Manual cleanup was necessary (more experienced programmmers can probably do this
 The list was broken out alphabetically and pasted into LibGuide pages manually.  Note there is a character limit to each page/subpage in LibGuides. (http://guides.lib.uw.edu/hsl/ej "Health Sciences eJournals")
 
 Fall 2017 Primo interface change required url modifcations as per the following example where the mmsid number (in this example: 99158627260001452) is the variable. https://alliance-primo.hosted.exlibrisgroup.com/primo-explore/search?query=any,contains,99158627260001452&tab=default_tab&search_scope=all&vid=UW&offset=0
+
+
+Updates:
+
+1.use spreadsheet of all health sciences titles with (mmsid and issn's included) HStitlesPlusMMSID
+2.download spreadsheet of list of alma changes since the last update HSL_title_list_date
+3.from the alma update spreadsheet, do a vlookup against HStitlesPlusMMSID; use issn's as source data and bring back titles
+4.re-sort to isolate the matches, then re-sort again by change type (created, deleted, modified)
+5.check each changed entry on live webpage and make appropriate updates; update HStitlesPlusMMSID spreadsheet as you go 
