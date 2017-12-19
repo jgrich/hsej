@@ -23,8 +23,8 @@ Fall 2017 Primo interface change required url modifcations as per the following 
 
 Updates:
 
-1.use spreadsheet of all health sciences titles with (mmsid and issn's included) HStitlesPlusMMSID
-2.download spreadsheet of list of alma changes since the last update HSL_title_list_date
-3.from the alma update spreadsheet, do a vlookup against HStitlesPlusMMSID; use issn's as source data and bring back titles
-4.re-sort to isolate the matches, then re-sort again by change type (created, deleted, modified)
-5.check each changed entry on live webpage and make appropriate updates; update HStitlesPlusMMSID spreadsheet as you go 
+1. use spreadsheet of all health sciences titles with (mmsid and issn's included) HStitlesPlusMMSID
+2. download spreadsheet of list of alma changes since the last update HSL_title_list_date
+3. from the alma update spreadsheet, do a vlookup against HStitlesPlusMMSID; use issn's as source data and bring back titles
+4. re-sort to isolate the matches, then re-sort again by change type (created, deleted, modified)
+5. check each changed entry on live webpage and make appropriate updates; update HStitlesPlusMMSID spreadsheet as you go 
