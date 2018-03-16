@@ -30,12 +30,12 @@ Updates:
   c. use Text to Columns to separate out ISSN's by the semi-colon delimiter
   d. insert3 empty columns after each ISSN column (to match the number of ISSN columns to look up in th the HStitlesPlusMMSID spreadsheet).
 3. from the alma update spreadsheet, do a vlookup against HStitlesPlusMMSID; use issn's as source data and bring back titles
-'''
+
     =IFERROR(VLOOKUP(G2,[HStitlesPlusMMSID_2017_12.xlsx]HStitlesPlusMMSID!$C$2:$F$11179,4,FALSE),"")
     =IFERROR(VLOOKUP(G2,[HStitlesPlusMMSID_2017_12.xlsx]HStitlesPlusMMSID!$D$2:$F$11179,3,FALSE),"")
     =IFERROR(VLOOKUP(G2,[HStitlesPlusMMSID_2017_12.xlsx]HStitlesPlusMMSID!$E$2:$F$11179,2,FALSE),"")
-'''
+
 4. re-sort to isolate the matches, then re-sort again by change type (created, deleted, modified)
 5. check each changed entry on live webpage and make appropriate updates; update HStitlesPlusMMSID spreadsheet as you go 
 
-**Check files for the most current lists of health sciences journal titles in tab delimited text format**
+**Check files for the most current lists of health sciences journal titles in tab delimited text format (coreHStitlesYYYYMM.txt)**
