@@ -1,7 +1,7 @@
 # hsej
 files for creating an ejournals list specific to the health sciences
 
-This repository supports the effort to create an A-Z list of ejournals that are relevant to the health sciences.  oXygen was used to transform the sources xml files.  A core list of titles (hstitles.xml) is cross-referenced (coreHStitlesInAlma.xsl) against an Alma report of all ejournal titles to generate the initial list of library holdings (alma.xml).
+This repository supports the effort to create an A-Z list of ejournals that are relevant to the health sciences.  oXygen was used initially to transform the source xml files.  A core list of titles (hstitles.xml) was cross-referenced (coreHStitlesInAlma.xsl) against an Alma report of all ejournal titles to generate the initial list of library holdings (alma.xml).
 
 -hstitles.xml - customized list of core health sciences related titles.  Issn's are included in non-hyphenated format in all relevant files.
 
@@ -23,19 +23,12 @@ Fall 2017 Primo interface change required url modifcations as per the following 
 
 Updates:
 
-1. use spreadsheet of all health sciences titles with (mmsid and issn's included) HStitlesPlusMMSID
-2. download spreadsheet of list of alma changes since the last update HSL_title_list_date.  In preparation for VLOOKUP:
-  a. move ISSN column to the far right
-  b. Find hyphens in ISSNs and Replace with nothing
-  c. use Text to Columns to separate out ISSN's by the semi-colon delimiter
-  d. insert3 empty columns after each ISSN column (to match the number of ISSN columns to look up in th the HStitlesPlusMMSID spreadsheet).
-3. from the alma update spreadsheet, do a vlookup against HStitlesPlusMMSID; use issn's as source data and bring back titles
+1. use a spreadsheet of the core health sciences titles with including mmsid and issn's
+2. download spreadsheet of list of alma changes since the last update
+3. use VLOOKUP from the alma updates spreadsheet to return journal titles from the core health sciences titles based on issn; this step allows you to isolate the changes relevant to health sciences journals
+4. copy the health sciences related changes to a new spreadsheet and sort by changeType; this step allows you to isolate changes based on record creation, record deletion, and record modification
+5. copy the changes by changeType to new spreadsheets
+6. for each changeType, use VLOOKUP on issn's to bring back MMSIDs; this step allows you to verify if there was already an MMSID associated with each journal title and quickly check to see if a change in MMSID truly occurred 
+7. make changes to the ejournals list accordingly.
 
-    =IFERROR(VLOOKUP(G2,[HStitlesPlusMMSID_2017_12.xlsx]HStitlesPlusMMSID!$C$2:$F$11179,4,FALSE),"")
-    =IFERROR(VLOOKUP(G2,[HStitlesPlusMMSID_2017_12.xlsx]HStitlesPlusMMSID!$D$2:$F$11179,3,FALSE),"")
-    =IFERROR(VLOOKUP(G2,[HStitlesPlusMMSID_2017_12.xlsx]HStitlesPlusMMSID!$E$2:$F$11179,2,FALSE),"")
-
-4. re-sort to isolate the matches, then re-sort again by change type (created, deleted, modified)
-5. check each changed entry on live webpage and make appropriate updates; update HStitlesPlusMMSID spreadsheet as you go 
-
-**Check files for the most current lists of health sciences journal titles in tab delimited text format (coreHStitlesYYYYMM.txt)**
+ NOTE: Due to the length of MMSID numbers (17 digits), Excel will often change the last 2 numbers to 00.  Fortunately, these last 2 digits are the same for all MMSIDs at the same institution.  
