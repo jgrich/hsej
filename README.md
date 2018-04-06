@@ -23,12 +23,11 @@ This repository supports the effort to create an A-Z list of ejournals that are 
 
 Updates:
 
-1. use a spreadsheet of the core health sciences titles with including mmsid and issn's
-2. download spreadsheet of list of alma changes since the last update
-3. use VLOOKUP from the alma updates spreadsheet to return journal titles from the core health sciences titles based on issn; this step allows you to isolate the changes relevant to health sciences journals
-4. copy the health sciences related changes to a new spreadsheet and sort by changeType; this step allows you to isolate changes based on record creation, record deletion, and record modification
-5. copy the changes by changeType to new spreadsheets
-6. for each changeType, use VLOOKUP on issn's to bring back MMSIDs; this step allows you to verify if there was already an MMSID associated with each journal title and quickly check to see if a change in MMSID truly occurred 
-7. make changes to the ejournals list accordingly.
+1. Open a spreadsheet of the core health sciences titles with including mmsid's and issn's
+2. Acquire spreadsheet of list of alma changes to ejournals since the last update (also includes mmsid's and issn's)
+3. Filter out changes to health sciences titles: use VLOOKUP from the alma updates spreadsheet to return journal titles from the core health sciences titles based on issn; isolate the changes relevant to health sciences journals
+4. Separate changed records by type of change made: record creation, record deletion, and record modification
+5. Compare old MMSIDs with MMSIDs in the changed records: use VLOOKUP on issn's to bring back old MMSIDs; verify if there was already an MMSID associated with each journal title and quickly check to see if a change in MMSID truly occurred 
+6. Update ejournal links accordingly.
 
- NOTE: Due to the length of MMSID numbers (17 digits), Excel will change the last 2 numbers to 00.  Fortunately, these last 2 digits are the same for all MMSIDs at the same institution.  
+NOTE: Due to the length of MMSID numbers (17 digits), Excel will change the last 2 numbers to 00.  Fortunately, these last 2 digits are the same for all MMSIDs at the same institution.  
