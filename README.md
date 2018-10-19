@@ -25,7 +25,7 @@ Updates:
 
 1. Open a spreadsheet of the core health sciences titles with including mmsid's and issn's
 2. Acquire spreadsheet of list of alma changes to ejournals since the last update (also includes mmsid's and issn's)
-3. Filter out changes to health sciences titles: use VLOOKUP from the alma updates spreadsheet to return journal titles from the core health sciences titles based on issn; isolate the changes relevant to health sciences journals
+3. Filter out changes to health sciences titles: use VLOOKUP from the alma updates spreadsheet to return journal titles from the core health sciences titles based on issn.  This will isolate the changes occurring with health sciences journals.
 4. Separate changed records by type of change made: record creation, record deletion, and record modification
 5. Compare old MMSIDs with MMSIDs in the changed records: use VLOOKUP on issn's to bring back old MMSIDs; verify if there was already an MMSID associated with each journal title and quickly check to see if a change in MMSID truly occurred 
 6. Update ejournal links accordingly.
