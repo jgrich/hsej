@@ -23,11 +23,11 @@ This repository supports the effort to create an A-Z list of ejournals that are 
 
 Updates:
 
-1. Open a spreadsheet of the core health sciences titles with including mmsid's and issn's
-2. Acquire spreadsheet of list of alma changes to ejournals since the last update (also includes mmsid's and issn's)
-3. Filter out changes to health sciences titles: use VLOOKUP from the alma updates spreadsheet to return journal titles from the core health sciences titles based on issn.  This will isolate the changes occurring with health sciences journals.
-4. Separate changed records by type of change made: record creation, record deletion, and record modification
-5. Compare old MMSIDs with MMSIDs in the changed records: use VLOOKUP on issn's to bring back old MMSIDs; verify if there was already an MMSID associated with each journal title and quickly check to see if a change in MMSID truly occurred 
-6. Update ejournal links accordingly.
+1. Open a spreadsheet of the core health sciences titles with including mmsid's and issn's.
+2. Acquire spreadsheet of list of alma changes to ejournals since the last update (also includes mmsid's and issn's).
+3. Identify health sciences titles in the alma changes: use VLOOKUP matching on issn's from the alma updates spreadsheet to return journal titles from the core health sciences titles.  
+4. Determine if there is an existing mmsid in the list of core health sciences titles: use VLOOKUP matching on issn's to bring return existing mmsid's to the list changed health sciences titles. quickly check to see if a change in MMSID truly occurred 
+5. Compare existing mmsid's with new mmsid's.  Note that there are 3 change types: creation, deletions, modifications.
+6. Update spreadsheet of core health sciences titles and ejournal links accordingly.
 
 NOTE: Due to the length of MMSID numbers (17 digits), Excel will change the last 2 numbers to 00.  Fortunately, these last 2 digits are the same for all MMSIDs at the same institution.  
